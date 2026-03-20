@@ -1,0 +1,25 @@
+# 1С:Отель Training Landing — TASolution
+
+## What this site is
+A landing page for an online training course on 1С:Отель (1C:Hotel) software, edition 9 (thin client).
+Offered by TASolution / Tripadvance (tasolution.ru), a company specializing in hotel automation on 1C platform.
+
+## Course overview
+- 3-day online course, 6 hours per day (18 hours total)
+- Designed for front-office staff: receptionists, senior administrators, front-office managers
+- Covers: reservations (booking), check-in/check-out, housekeeping module, reports, invoicing, cash register closing
+- Language: Russian
+- Format: online, flexible schedule
+
+## Company
+- Name: ООО «ТРИП-АДВАНС» (TASolution / Tripadvance)
+- INN: 2301105561
+- Website: https://tasolution.ru
+- Phone: +7 (861) 213-23-13
+- Email: acc@tripadvance.ru
+
+## Course registration
+https://tasolution.ru/training-1c-hotel
+
+## Canonical URL
+https://byivus.github.io/1c-hotel-training-landing/

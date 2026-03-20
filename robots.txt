@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://byivus.github.io/1c-hotel-training-landing/sitemap.xml
