@@ -830,10 +830,10 @@
       <li><a href="#products">Продукты</a></li>
       <li><a href="#contacts">Контакты</a></li>
       <li class="nav__cta-mobile">
-        <a href="https://tasolution.ru/training-1c-hotel" class="nav__cta" target="_blank" rel="noopener">Записаться</a>
+        <a href="#contacts" class="nav__cta">Записаться</a>
       </li>
     </ul>
-    <a href="https://tasolution.ru/training-1c-hotel" class="nav__cta" target="_blank" rel="noopener">Записаться</a>
+    <a href="#contacts" class="nav__cta">Записаться</a>
     <button class="nav__burger" id="burger" aria-label="Меню">
       <span></span><span></span><span></span>
     </button>
@@ -864,7 +864,7 @@
       </div>
     </div>
     <div class="hero__buttons">
-      <a href="https://tasolution.ru/training-1c-hotel" class="btn btn-primary" target="_blank" rel="noopener">
+      <a href="#contacts" class="btn btn-primary">
         Заказать обучение
       </a>
       <a href="#program" class="btn btn-outline">Посмотреть программу</a>
@@ -1161,6 +1161,7 @@
       <input type="email" name="email" placeholder="Email" required />
       <input type="tel" name="phone" placeholder="Телефон (необязательно)" />
       <textarea name="message" placeholder="Комментарий: количество сотрудников, удобные даты и т.д." rows="3"></textarea>
+      <div class="h-captcha" data-captcha="true"></div>
       <button type="submit">Отправить заявку</button>
     </form>
 
@@ -1271,12 +1272,17 @@
     });
   });
 
-  // Contact form — AJAX submit
+  // Contact form — AJAX submit with hCaptcha validation
   const contactForm = document.getElementById('contactForm');
   const formSuccess = document.getElementById('formSuccess');
   if (contactForm) {
     contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const hCaptcha = contactForm.querySelector('textarea[name=h-captcha-response]');
+      if (hCaptcha && !hCaptcha.value) {
+        alert('Пожалуйста, пройдите проверку капчи');
+        return;
+      }
       const btn = contactForm.querySelector('button');
       btn.textContent = 'Отправка...';
       btn.disabled = true;
@@ -1300,6 +1306,9 @@
     });
   }
 </script>
+
+<!-- Web3Forms hCaptcha script -->
+<script src="https://web3forms.com/client/script.js" async defer></script>
 
 </body>
 </html>
