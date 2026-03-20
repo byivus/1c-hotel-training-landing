@@ -1,25 +1,37 @@
-# 1С:Отель Training Landing — TASolution
+# Обучение 1С:Отель — TASolution
 
-## What this site is
-A landing page for an online training course on 1С:Отель (1C:Hotel) software, edition 9 (thin client).
-Offered by TASolution / Tripadvance (tasolution.ru), a company specializing in hotel automation on 1C platform.
+> Онлайн-курс обучения работе в программе 1С:Отель ред. 9 (тонкий клиент) для сотрудников службы приёма и размещения отелей. 3 дня по 2 часа — итого 6 часов практики. Провайдер — TASolution (ООО «ТРИП-АДВАНС»), специализированная компания по автоматизации отелей на базе 1С.
 
-## Course overview
-- 3-day online course, 6 hours per day (18 hours total)
-- Designed for front-office staff: receptionists, senior administrators, front-office managers
-- Covers: reservations (booking), check-in/check-out, housekeeping module, reports, invoicing, cash register closing
-- Language: Russian
-- Format: online, flexible schedule
+## О курсе
 
-## Company
-- Name: ООО «ТРИП-АДВАНС» (TASolution / Tripadvance)
-- INN: 2301105561
-- Website: https://tasolution.ru
-- Phone: +7 (861) 213-23-13
-- Email: acc@tripadvance.ru
+Формат: онлайн, дистанционно
+Длительность: 3 дня по 2 часа (итого 6 часов)
+Уровень: начинающий
+Язык: русский
+Целевая аудитория: администраторы ресепшена, старшие администраторы, руководители службы приёма, новые сотрудники отеля
 
-## Course registration
-https://tasolution.ru/training-1c-hotel
+## Программа
 
-## Canonical URL
-https://byivus.github.io/1c-hotel-training-landing/
+День 1 — Введение и бронирование (2 часа, 7 тем): запуск программы, алгоритм ввода гостя, варианты создания брони, создание контрагента и договора, работа с бронированием, оплата по брони, отчёты бронирования.
+
+День 2 — Размещение (2 часа, 8 тем): журнал фронт-офис, алгоритм размещения, карточка гостя, переселение, продление, фолио, начисление услуг и оплата, выселение, работа с деньгами, закрытие кассовой смены, создание услуг, выгрузка Контур ФМС.
+
+День 3 — Служба номерного фонда и отчёты (2 часа, 5 тем): список номеров, питание, бронь ресурсов, взаиморасчёты с контрагентами, отчёты, рассылка из 1С:Отель.
+
+## Компания
+
+ООО «ТРИП-АДВАНС» (бренд: TASolution / Tripadvance)
+ИНН: 2301105561
+Регион: Краснодарский край, Анапа
+Специализация: автоматизация отелей на базе 1С (1С:Отель, 1С:СПА, 1С:Фитнес, 1С:Общепит)
+
+## Ссылки
+
+- [Главная страница курса](https://ta1chotel.ru/)
+- [Записаться на обучение](https://tasolution.ru/training-1c-hotel)
+- [Сайт компании TASolution](https://tasolution.ru)
+
+## Контакты
+
+Телефон: +7 (861) 213-23-13
+Email: acc@tripadvance.ru

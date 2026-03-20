@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+Host: ta1chotel.ru
 Sitemap: https://ta1chotel.ru/sitemap.xml
