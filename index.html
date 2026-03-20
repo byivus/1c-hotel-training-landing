@@ -84,7 +84,13 @@
       "addressCountry": "RU"
     },
     "taxID": "2301105561",
-    "description": "Специализированная компания по автоматизации отелей на базе 1С. Внедрение и сопровождение 1С:Отель, 1С:СПА, 1С:Фитнес, 1С:Общепит."
+    "description": "Специализированная компания по автоматизации отелей на базе 1С. Внедрение и сопровождение 1С:Отель, 1С:СПА, 1С:Фитнес, 1С:Общепит.",
+    "sameAs": [
+      "https://tripadvance.ru/",
+      "https://tabooking.ru/",
+      "https://hotelpricingbot.com/",
+      "https://ta1chotel.ru/"
+    ]
   }
   </script>
 
@@ -537,6 +543,41 @@
     .why__item h3 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
     .why__item p { font-size: 14px; color: var(--gray-600); line-height: 1.5; }
 
+    /* ─── PRODUCTS ─── */
+    .products__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .product__card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      text-decoration: none;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.04);
+      transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+    .product__card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: var(--blue);
+    }
+    .product__icon {
+      width: 48px; height: 48px;
+      background: var(--blue-light);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .product__card h3 { font-size: 16px; font-weight: 700; margin: 0; }
+    .product__card p { font-size: 14px; color: var(--gray-600); line-height: 1.5; margin: 0; }
+    .product__url { font-size: 12px; color: var(--blue); font-weight: 500; }
+
     /* ─── FAQ ─── */
     .faq__list {
       display: flex;
@@ -596,12 +637,78 @@
       font-weight: 700;
       margin-bottom: 16px;
     }
-    .cta-section p {
+    .cta-section > .container > p {
       font-size: 17px;
       opacity: .85;
       max-width: 540px;
       margin: 0 auto 40px;
       line-height: 1.55;
+    }
+    .cta__form {
+      max-width: 480px;
+      margin: 0 auto 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      text-align: left;
+    }
+    .cta__form input,
+    .cta__form textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 2px solid rgba(255,255,255,.25);
+      border-radius: 10px;
+      background: rgba(255,255,255,.1);
+      color: var(--white);
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      outline: none;
+      transition: border-color var(--transition), background var(--transition);
+    }
+    .cta__form input::placeholder,
+    .cta__form textarea::placeholder {
+      color: rgba(255,255,255,.55);
+    }
+    .cta__form input:focus,
+    .cta__form textarea:focus {
+      border-color: rgba(255,255,255,.7);
+      background: rgba(255,255,255,.15);
+    }
+    .cta__form textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+    .cta__form button {
+      padding: 16px 36px;
+      background: var(--white);
+      color: var(--blue);
+      border: none;
+      border-radius: 10px;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .cta__form button:hover {
+      background: var(--blue-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    }
+    .cta__form-success {
+      display: none;
+      background: rgba(255,255,255,.15);
+      border: 1px solid rgba(255,255,255,.3);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 0 auto 32px;
+      max-width: 480px;
+      font-size: 17px;
+    }
+    .cta__or {
+      font-size: 14px;
+      opacity: .6;
+      margin-bottom: 8px;
     }
     .cta__contacts {
       display: flex;
@@ -720,6 +827,7 @@
       <li><a href="#whom">Для кого</a></li>
       <li><a href="#why">Преимущества</a></li>
       <li><a href="#faq">FAQ</a></li>
+      <li><a href="#products">Продукты</a></li>
       <li><a href="#contacts">Контакты</a></li>
       <li class="nav__cta-mobile">
         <a href="https://tasolution.ru/training-1c-hotel" class="nav__cta" target="_blank" rel="noopener">Записаться</a>
@@ -1003,14 +1111,65 @@
   </div>
 </section>
 
+<!-- ─── PRODUCTS ─── -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="section__tag">Экосистема</div>
+    <h2 class="section__title">Продукты TASolution для отелей</h2>
+    <p class="section__lead">Помимо обучения, мы разрабатываем и внедряем решения для автоматизации гостиничного бизнеса.</p>
+    <div class="products__grid">
+      <a href="https://tasolution.ru/" class="product__card" target="_blank" rel="noopener">
+        <div class="product__icon">🏗️</div>
+        <h3>TASolution</h3>
+        <p>Комплекс решений для отелей: внедрение и сопровождение 1С:Отель, настройка, интеграции, техподдержка.</p>
+        <span class="product__url">tasolution.ru</span>
+      </a>
+      <a href="https://tripadvance.ru/" class="product__card" target="_blank" rel="noopener">
+        <div class="product__icon">🔗</div>
+        <h3>TripAdvance</h3>
+        <p>Модуль бронирования для сайта отеля с комиссией 0%. Интеграция с 1С:Отель, Яндекс Путешествия, менеджерами каналов.</p>
+        <span class="product__url">tripadvance.ru</span>
+      </a>
+      <a href="https://tabooking.ru/" class="product__card" target="_blank" rel="noopener">
+        <div class="product__icon">📅</div>
+        <h3>TABooking</h3>
+        <p>Модуль онлайн-бронирования нового поколения. 100+ каналов продаж, динамические цены, от 3 500 руб/мес.</p>
+        <span class="product__url">tabooking.ru</span>
+      </a>
+      <a href="https://hotelpricingbot.com/" class="product__card" target="_blank" rel="noopener">
+        <div class="product__icon">🤖</div>
+        <h3>Hotel Pricing Bot</h3>
+        <p>Telegram-бот для мгновенного расчёта стоимости проживания. AI-понимание текста, сезонные тарифы.</p>
+        <span class="product__url">hotelpricingbot.com</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ─── CTA / CONTACTS ─── -->
 <section class="cta-section" id="contacts">
   <div class="container">
     <h2>Готовы обучить вашу команду?</h2>
-    <p>Оставьте заявку на сайте или свяжитесь с нами напрямую — ответим в течение рабочего дня и согласуем удобное время.</p>
-    <a href="https://tasolution.ru/training-1c-hotel" class="btn btn-white" target="_blank" rel="noopener">
-      Оставить заявку
-    </a>
+    <p>Оставьте заявку — ответим в течение рабочего дня и согласуем удобное время.</p>
+
+    <form class="cta__form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="1c1c2e11-64c4-4d6e-adc3-e1c7e8204a75" />
+      <input type="hidden" name="subject" value="Заявка на обучение 1С:Отель — ta1chotel.ru" />
+      <input type="hidden" name="from_name" value="ta1chotel.ru" />
+      <input type="hidden" name="redirect" value="https://ta1chotel.ru/#contacts" />
+      <input type="text" name="name" placeholder="Ваше имя" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Телефон (необязательно)" />
+      <textarea name="message" placeholder="Комментарий: количество сотрудников, удобные даты и т.д." rows="3"></textarea>
+      <button type="submit">Отправить заявку</button>
+    </form>
+
+    <div class="cta__form-success" id="formSuccess">
+      ✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.
+    </div>
+
+    <div class="cta__or">или свяжитесь с нами напрямую</div>
+
     <div class="cta__contacts">
       <a href="tel:+78612132313" class="cta__contact-item">
         <span class="cta__contact-icon">📞</span>
@@ -1049,6 +1208,12 @@
       <a href="https://tasolution.ru" target="_blank" rel="noopener">
         <span>🌐</span> tasolution.ru
       </a>
+    </div>
+    <div class="footer__links">
+      <a href="https://tripadvance.ru/" target="_blank" rel="noopener">TripAdvance — модуль бронирования</a>
+      <a href="https://tabooking.ru/" target="_blank" rel="noopener">TABooking — онлайн-бронирование</a>
+      <a href="https://hotelpricingbot.com/" target="_blank" rel="noopener">Hotel Pricing Bot — расчёт цен</a>
+      <a href="https://ta1chotel.ru/" rel="noopener">Обучение 1С:Отель</a>
     </div>
   </div>
   <div class="footer__bottom">
@@ -1105,6 +1270,35 @@
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });
+
+  // Contact form — AJAX submit
+  const contactForm = document.getElementById('contactForm');
+  const formSuccess = document.getElementById('formSuccess');
+  if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = contactForm.querySelector('button');
+      btn.textContent = 'Отправка...';
+      btn.disabled = true;
+      try {
+        const resp = await fetch(contactForm.action, {
+          method: 'POST',
+          body: new FormData(contactForm),
+        });
+        if (resp.ok) {
+          contactForm.style.display = 'none';
+          formSuccess.style.display = 'block';
+          contactForm.reset();
+        } else {
+          btn.textContent = 'Ошибка — попробуйте ещё раз';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Ошибка сети — попробуйте ещё раз';
+        btn.disabled = false;
+      }
+    });
+  }
 </script>
 
 </body>
